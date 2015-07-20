@@ -35,13 +35,10 @@
     <property name="commandService" ref="transactionCmdService" />
   </bean>
   
-  <bean id="deploymentSync" class="org.jbpm.kie.services.impl.store.DeploymentSynchronizer">
+  <bean id="deploymentSync" class="org.jbpm.kie.services.impl.store.DeploymentSynchronizer" init-method="synchronize">
     <property name="deploymentService" ref="deploymentService"/>
     <property name="deploymentStore" ref="deploymentStore" />
   </bean>
-  
-  <bean id="syncInvoker" class="org.jbpm.kie.services.impl.store.DeploymentSyncInvoker" init-method="start" destroy-method="stop">
-    <constructor-arg name="synchronizer" ref="deploymentSync"/>
-  </bean>
+
 
 </beans>

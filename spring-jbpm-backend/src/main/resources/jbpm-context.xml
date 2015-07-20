@@ -74,5 +74,10 @@
     <property name="dataService" ref="runtimeDataService"/>
     <property name="deploymentService" ref="deploymentService"/>
   </bean>
+  
+  <bean id="executorService" class="org.jbpm.executor.ExecutorServiceFactory" factory-method="newExecutorService"  
+                    depends-on="entityManagerFactory" init-method="init" destroy-method="destroy">
+      <constructor-arg ref="entityManagerFactory" />
+  </bean>
 
 </beans>

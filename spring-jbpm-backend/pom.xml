@@ -82,6 +82,14 @@
 			<groupId>org.jbpm</groupId>
 			<artifactId>jbpm-workitems</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.jbpm</groupId>
+            <artifactId>jbpm-executor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jbpm</groupId>
+            <artifactId>jbpm-services-ejb-timer</artifactId>
+        </dependency>
 
 		<dependency>
 			<groupId>org.kie</groupId>
